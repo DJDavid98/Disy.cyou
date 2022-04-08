@@ -1,6 +1,6 @@
 import type { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
-import { StickerList, StickerListProps } from './SickerList';
+import { StickerList, StickerListProps } from '../components/SickerList';
 import { loadPacks } from '../util/load-packs';
 
 interface HomeProps {

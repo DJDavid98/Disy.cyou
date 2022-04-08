@@ -1,5 +1,5 @@
 import TelegramBot, { StickerSet } from 'node-telegram-bot-api';
-import type { StickerListProps } from '../pages/SickerList';
+import type { StickerListProps } from '../components/SickerList';
 
 export const loadPacks = (names: (string | undefined)[]): Promise<StickerListProps[]> => {
   const { BOT_TOKEN: botToken } = process.env;
