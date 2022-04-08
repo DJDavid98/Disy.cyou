@@ -1,0 +1,26 @@
+.wrapper {
+  cursor: pointer;
+  transition: transform .1s linear;
+  will-change: transform;
+  position: relative;
+  user-select: none;
+}
+
+.wrapper:hover {
+  transform: scale(1.05);
+}
+
+.wrapper:active {
+  transform: scale(0.95) !important;
+}
+
+.wrapper .emoji {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: .25rem;
+  border-radius: .15rem;
+  text-shadow: 0 0 10px black;
+  font-size: 2rem;
+  speak: never;
+}

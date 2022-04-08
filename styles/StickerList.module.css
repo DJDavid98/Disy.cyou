@@ -1,0 +1,24 @@
+.sticker-list {
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(255, 255, 255, .1);
+  border-radius: 1rem;
+  padding: 1rem;
+  max-width: 1024px;
+}
+
+.sticker-list:not(:first-child) {
+  margin-top: 1rem;
+}
+
+.sticker-list ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.sticker-list ul li {
+  display: block;
+  padding: 1rem;
+  flex: 0 1 200px;
+}

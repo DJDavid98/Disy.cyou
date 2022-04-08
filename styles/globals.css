@@ -1,7 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Catamaran:400,700&subset=latin-ext,latin&display=swap');
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Catamaran', sans-serif;;
   background-color: #000;
+  color: #ccc;
+  text-align: center;
+}
+
+a {
+  color: inherit;
 }
