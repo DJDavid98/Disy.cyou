@@ -15,6 +15,7 @@
 }
 
 .wrapper .emoji {
+  display: none;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -23,4 +24,10 @@
   text-shadow: 0 0 10px black;
   font-size: 2rem;
   speak: never;
+}
+
+@media (min-width: 500px) {
+  .wrapper .emoji {
+    display: block;
+  }
 }
