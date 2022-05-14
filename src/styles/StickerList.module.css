@@ -2,29 +2,42 @@
   --offset-margin: 3.5rem;
 }
 
+.sticker-list:not(:first-child) {
+  margin-top: 8rem;
+}
+
 .sticker-list h2 {
   padding: .75rem;
   margin: 0;
 }
 
-.sticker-list:not(:first-child) {
-  margin-top: 1rem;
-}
-
 .sticker-list .background {
   border-style: solid;
   border-width: .35rem 0;
-  border-top-color: #3A3D76;
-  border-bottom-color: #655F90;
   margin: var(--offset-margin) 0;
   padding: 0 .5rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.sticker-list[data-name="DoubleColon"] {
+  border-top-color: #3A3D76;
+  border-bottom-color: #655F90;
 }
 
 .sticker-list[data-name="DoubleColon"] .background {
   background-image: url('/backdrop_sfw.png'), linear-gradient(to bottom, #4E538C 0%, #656292 50%, #9F869F 100%);
-  background-size: cover;
   background-position: 50% 35%;
-  background-repeat: no-repeat;
+}
+
+.sticker-list[data-name="DoubleColonNSFW"] {
+  border-top-color: hsl(0, 34%, 35%);
+  border-bottom-color: hsl(0, 21%, 47%);
+}
+
+.sticker-list[data-name="DoubleColonNSFW"] .background {
+  background-image: url('/backdrop_nsfw.png'), linear-gradient(to bottom, hsl(0, 28%, 43%) 0%, hsl(0, 20%, 48%) 50%, hsl(0, 12%, 57%) 100%);
+  background-position: 50% 60%;
 }
 
 .sticker-list ul {
@@ -44,9 +57,24 @@
 }
 
 @media (min-width: 500px) {
+  .sticker-list:not(:first-child) {
+    margin-top: 6rem;
+  }
+}
+
+@media (min-width: 500px) {
+  .sticker-list:not(:first-child) {
+    margin-top: 8rem;
+  }
+
   .sticker-list ul li {
     padding: 1rem;
     flex-basis: 18%;
+  }
+
+  .sticker-list[data-name="DoubleColonNSFW"] ul li {
+    padding: 1rem 2rem;
+    flex-basis: 20%;
   }
 }
 

@@ -26,7 +26,6 @@ const App: AppComponent = ({ Component, pageProps }) => {
       </Head>
       <DefaultSeo
         title={SITE_TITLE}
-        description="Artwork by ~Dream_Weaver_Pony"
         openGraph={{
           type: 'website',
           locale: 'en-US',

@@ -1,3 +1,4 @@
+import { Artist, PackInfoProps } from '../components/SiteHeader';
 import { StickerListProps } from '../components/SickerList';
 
 enum Emoji {
@@ -17,29 +18,68 @@ enum Emoji {
   WORRIED = '😟',
   YAWN = '🥱',
   CELEBRATION = '🎉',
+  EGGPLANT = '🍆',
+  PEACH = '🍑',
+  SWEATING_FACE = '😰',
+  GLASS_OF_MILK = '🥛',
+  PIN = '📌',
+  TONGUE_OUT_WINK = '😜',
 }
 
-const DREAM_WEAVER_SIZES = { width: 260, height: 260 };
+const DreamWeaverPony: Artist = {
+  name: '~Dream_Weaver_Pony',
+  url: 'https://www.furaffinity.net/user/dreamweaverpony',
+};
 
-export const SFW_PACK: StickerListProps = {
+const KPVT: Artist = {
+  name: '@KPVT_ARTS',
+  url: 'https://twitter.com/KPVT_ARTS',
+};
+
+const SFW_STICKER_PACK: StickerListProps = {
   name: 'DoubleColon',
-  title: 'Double Colon - OC of DJDavid98',
   stickers: [
-    { ...DREAM_WEAVER_SIZES, publicFileName: 'serious', emoji: Emoji.SLIGHTLY_SAD },
-    { ...DREAM_WEAVER_SIZES, publicFileName: 'yay', emoji: Emoji.CELEBRATION },
-    { ...DREAM_WEAVER_SIZES, publicFileName: 'ohno', emoji: Emoji.PERSEVERING },
-    { ...DREAM_WEAVER_SIZES, publicFileName: 'awww', emoji: Emoji.SMILING_FACE_WITH_OPEN_HANDS },
-    { ...DREAM_WEAVER_SIZES, publicFileName: 'wink', emoji: Emoji.WINK },
-    { ...DREAM_WEAVER_SIZES, publicFileName: 'thinking', emoji: Emoji.THINKING },
-    { ...DREAM_WEAVER_SIZES, publicFileName: 'cover', emoji: Emoji.FLUSHED },
-    { ...DREAM_WEAVER_SIZES, publicFileName: 'angry', emoji: Emoji.ANGRY_FACE },
-    { ...DREAM_WEAVER_SIZES, publicFileName: 'hug', emoji: Emoji.HUG },
-    { ...DREAM_WEAVER_SIZES, publicFileName: 'happy', emoji: Emoji.HAPPY },
-    { ...DREAM_WEAVER_SIZES, publicFileName: 'concern', emoji: Emoji.WORRIED },
-    { ...DREAM_WEAVER_SIZES, publicFileName: 'bow', emoji: Emoji.BOWING },
-    { ...DREAM_WEAVER_SIZES, publicFileName: 'smile', emoji: Emoji.FOX },
-    { ...DREAM_WEAVER_SIZES, publicFileName: 'blep', emoji: Emoji.TONGUE_OUT },
-    { ...DREAM_WEAVER_SIZES, publicFileName: 'puppy', emoji: Emoji.PLEADING },
-    { ...DREAM_WEAVER_SIZES, publicFileName: 'yawn', emoji: Emoji.YAWN },
+    { publicFileName: 'serious', emoji: Emoji.SLIGHTLY_SAD },
+    { publicFileName: 'yay', emoji: Emoji.CELEBRATION },
+    { publicFileName: 'ohno', emoji: Emoji.PERSEVERING },
+    { publicFileName: 'awww', emoji: Emoji.SMILING_FACE_WITH_OPEN_HANDS },
+    { publicFileName: 'wink', emoji: Emoji.WINK },
+    { publicFileName: 'thinking', emoji: Emoji.THINKING },
+    { publicFileName: 'cover', emoji: Emoji.FLUSHED },
+    { publicFileName: 'angry', emoji: Emoji.ANGRY_FACE },
+    { publicFileName: 'hug', emoji: Emoji.HUG },
+    { publicFileName: 'happy', emoji: Emoji.HAPPY },
+    { publicFileName: 'concern', emoji: Emoji.WORRIED },
+    { publicFileName: 'bow', emoji: Emoji.BOWING },
+    { publicFileName: 'smile', emoji: Emoji.FOX },
+    { publicFileName: 'blep', emoji: Emoji.TONGUE_OUT },
+    { publicFileName: 'puppy', emoji: Emoji.PLEADING },
+    { publicFileName: 'yawn', emoji: Emoji.YAWN },
   ],
+};
+
+const NSFW_STICKER_PACK: StickerListProps = {
+  name: 'DoubleColonNSFW',
+  stickers: [
+    { publicFileName: 'ass', emoji: Emoji.PEACH },
+    { publicFileName: 'dildo', emoji: Emoji.EGGPLANT },
+    { publicFileName: 'eating-out', emoji: Emoji.SWEATING_FACE },
+    { publicFileName: 'milk', emoji: Emoji.GLASS_OF_MILK },
+    { publicFileName: 'pinned', emoji: Emoji.PIN },
+    { publicFileName: 'snack', emoji: Emoji.TONGUE_OUT_WINK },
+  ],
+};
+
+export const SFW_PAGE_CONFIG: PackInfoProps = {
+  artists: [DreamWeaverPony],
+  refSheetUrl: 'https://fox.djdavid98.art',
+  nsfw: false,
+  packs: [SFW_STICKER_PACK],
+};
+
+export const NSFW_PAGE_CONFIG: PackInfoProps = {
+  artists: [DreamWeaverPony, KPVT],
+  refSheetUrl: 'https://nsfox.djdavid98.art',
+  nsfw: true,
+  packs: [SFW_STICKER_PACK, NSFW_STICKER_PACK],
 };
