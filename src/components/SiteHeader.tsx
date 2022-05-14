@@ -21,7 +21,7 @@ export interface PackInfoProps {
 export const SiteHeader: VFC<PackInfoProps> = ({ refSheetUrl, packs, artists, nsfw }) => (
   <>
     <header className={styles.header}>
-      <h1>{SITE_TITLE + (nsfw ? '' : ' (NSFW)')}</h1>
+      <h1>{SITE_TITLE + (nsfw ? ' (NSFW)' : '')}</h1>
       <p>
         Fursona of DJDavid98
         <StatSeparator />
