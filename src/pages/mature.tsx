@@ -1,7 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { NSFW_PAGE_CONFIG, SFW_PAGE_CONFIG } from '../config';
-import { NextSeo } from 'next-seo';
+import { NSFW_PAGE_CONFIG, SITE_TITLE } from '../config';
 import { SiteHeader } from '../components/SiteHeader';
 import { StickerList } from '../components/SickerList';
 
@@ -10,8 +9,7 @@ const MatureHome: NextPage = () => (
     <Head>
       <link rel="icon" href="/favicon.ico" />
     </Head>
-    <NextSeo description={`Artwork by ${SFW_PAGE_CONFIG.artists.map((a) => a.name).join(', ')}`} />
-    <SiteHeader {...NSFW_PAGE_CONFIG} />
+    <SiteHeader {...NSFW_PAGE_CONFIG} title={`${SITE_TITLE} (NSFW)`} />
     <div>
       {NSFW_PAGE_CONFIG.packs.map((pack) => (
         <StickerList key={pack.name} {...pack} />
