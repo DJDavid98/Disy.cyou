@@ -1,5 +1,6 @@
 import { Artist, PackInfoProps } from '../components/SiteHeader';
 import { StickerListProps } from '../components/SickerList';
+import { SITE_TITLE } from './index';
 
 enum Emoji {
   ANGRY_FACE = '😡',
@@ -71,15 +72,15 @@ const NSFW_STICKER_PACK: StickerListProps = {
 };
 
 export const SFW_PAGE_CONFIG: PackInfoProps = {
+  title: SITE_TITLE,
   artists: [DreamWeaverPony],
   refSheetUrl: 'https://fox.djdavid98.art',
-  nsfw: false,
   packs: [SFW_STICKER_PACK],
 };
 
 export const NSFW_PAGE_CONFIG: PackInfoProps = {
+  title: `${SITE_TITLE} (NSFW)`,
   artists: [DreamWeaverPony, KPVT],
   refSheetUrl: 'https://nsfox.djdavid98.art',
-  nsfw: true,
   packs: [SFW_STICKER_PACK, NSFW_STICKER_PACK],
 };
