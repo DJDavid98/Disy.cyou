@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { NSFW_PAGE_CONFIG } from '../config';
+import { NSFW_PAGE_CONFIG } from '../config/packs';
 import { SiteHeader } from '../components/SiteHeader';
 import { StickerList } from '../components/SickerList';
 

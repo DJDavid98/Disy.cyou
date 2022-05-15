@@ -1,5 +1,3 @@
-export * from './packs';
-
 export const CANONICAL_URL = 'https://disy.cyou';
 export const IS_CLIENT_SIDE = typeof window !== 'undefined';
 

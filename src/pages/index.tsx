@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { StickerList } from '../components/SickerList';
-import { SFW_PAGE_CONFIG } from '../config';
+import { SFW_PAGE_CONFIG } from '../config/packs';
 import { SiteHeader } from '../components/SiteHeader';
 
 const Home: NextPage = () => (
